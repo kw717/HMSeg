@@ -103,8 +103,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="evaluate")
     parser.add_argument("--logdir", default="./test/", type=str,
                         help="run logdir")
-    parser.add_argument("--config", type=str, default="configs/fpua_uatd.json", help="Configuration file to use")
-    parser.add_argument("--pth", default="fpuamodel.pth", type=str,
+    parser.add_argument("--config", type=str, default="configs/HMSeg.json", help="Configuration file to use")
+    parser.add_argument("--pth", default="HMSeg_mdd.pth", type=str,
                         help="checkpoint")
     parser.add_argument("-s", type=bool, default=False,
                         help="save predict or not")

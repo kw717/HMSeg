@@ -1,0 +1,41 @@
+{
+    "model_name": "HMSeg",
+
+    "inputs": "rgb",
+    "output": "m",
+
+    "dataset": "UATD",
+    "root": "/home/wangyike/UATD",
+    "n_classes": 11,
+    "id_unlabel": -1,
+    "brightness": 0.5,
+    "contrast": 0.5,
+    "saturation": 0.5,
+    "p": 0.5,
+    "scales_range": "0.5 2.0",
+    "crop_size": "480 320",
+    "eval_scales": "0.5 0.75 1.0 1.25 1.5 1.75",
+    "eval_flip": "true",
+
+
+    "ims_per_gpu": 16,
+    "num_workers": 12,
+
+    "optim": "ranger",
+    "lr_start": 0.03,
+    "momentum": 0.9,
+    "weight_decay": 5e-4,
+    "lr_power": 0.9,
+    "epochs": 25,
+    "loss1": 1,
+    "L1": "ce",
+    "loss2": 1.5,
+    "L2": "ls",
+    "loss3": 0.3,
+    "L3": "ce",
+    "dn": 0.3,
+
+    "loss": "crossentropy",
+    "class_weight": "enet"
+}
+

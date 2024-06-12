@@ -42,3 +42,6 @@ def get_model(cfg):
     if cfg['model_name'] == 'mitunet':
         from .models.MitUnet.Mit_Unet import MiT_Unet
         return MiT_Unet(cfg['n_classes'])
+    if cfg['model_name'] == 'HMSeg':
+        from .models.HMNet import HMNet_seg
+        return HMNet_seg( cfg['n_classes'])
